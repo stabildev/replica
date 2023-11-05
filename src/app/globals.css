@@ -3,25 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 205 210 230;
+  --background-rgb: 5 6 30;
+  --border-rgb: 226 232 255;
+  --grad-purple-rgb: 153 104 255;
+  --grad-pink-rgb: 255 108 178;
+  --grad-orange-rgb: 255 175 86;
+  --purpleshine-rgb: 202 183 255;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(17%) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(17%) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  0% {
+    transform: rotate(360deg) translateX(17%) rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg) translateX(17%) rotate(0deg);
+  }
+}
+
+.mask-gradient {
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent,
+    transparent 50%,
+    black 100%
+  );
+  mask-image: linear-gradient(to top, transparent, transparent 50%, black 100%);
 }
