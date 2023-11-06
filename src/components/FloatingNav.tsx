@@ -72,6 +72,7 @@ export const FloatingNav = ({
         className
       )}
     >
+      {/* Background */}
       <div
         className={cn(
           'bg-background/50 absolute inset-0 -z-10 transition delay-700 duration-500',
@@ -84,12 +85,14 @@ export const FloatingNav = ({
           collapsed ? 'opacity-100' : 'opacity-0'
         )}
       />
+
       <div
         ref={hoverRef}
         className="bg-border/[3%] border-border/10 pointer-events-none absolute block h-10 rounded-full border transition-all duration-300"
         style={underlineStyles}
       />
       <ul ref={navRef} className="flex items-center text-sm opacity-100">
+        {/* Menu links */}
         {items.map((item, index) => (
           <NavLink index={index} key={index}>
             {item.name}
@@ -100,16 +103,29 @@ export const FloatingNav = ({
             )}
           </NavLink>
         ))}
-        {collapsed && (
-          <li
+
+        {/* Separator */}
+        <li className="relative -left-1 -top-2">
+          <div
             className={cn(
-              'from-grad-purple via-grad-pink to-grad-orange relative ml-3 flex h-8 cursor-pointer items-center rounded-full bg-gradient-to-r from-10% via-40% px-3 font-medium text-white',
-              "before:text-border/20 before:absolute before:-left-4 before:content-['|']"
+              'text-border/20 tansition-opacity absolute delay-700 duration-500',
+              collapsed ? 'opacity-1' : 'opacity-0'
             )}
           >
-            Join waitlist
-          </li>
-        )}
+            |
+          </div>
+        </li>
+
+        {/* CTA Button */}
+        <li
+          className={cn(
+            'from-grad-purple via-grad-pink to-grad-orange relative ml-3 mr-1 flex h-8 cursor-pointer flex-row items-center overflow-clip rounded-full bg-gradient-to-r from-10% via-40% text-center font-medium text-white',
+            'transition-all delay-700 duration-500',
+            collapsed ? 'w-28' : 'w-0'
+          )}
+        >
+          <span className="mx-auto whitespace-nowrap">Join waitlist</span>
+        </li>
       </ul>
     </nav>
   )

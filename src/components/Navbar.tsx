@@ -38,13 +38,14 @@ export const Navbar = () => {
   }, [])
 
   return (
-    <div className="fixed top-0 z-20 flex h-20 w-full flex-col items-stretch">
+    <div className="fixed top-0 z-20 flex h-20 w-full flex-col items-stretch px-6">
       <div
         className={cn(
           'bg-border/[1%] flex h-full w-full items-center justify-center backdrop-blur-md transition-opacity delay-700 duration-500',
           collapsed && 'opacity-0'
         )}
       >
+        {/* Logo */}
         <nav className="container flex max-w-[1330px] justify-between">
           <Link className="flex items-center gap-3" href="/">
             <div className="via-grad-pink flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-violet-400 from-10% to-yellow-200 to-90% text-2xl font-medium text-white">
@@ -66,7 +67,7 @@ export const Navbar = () => {
         items={menuItems}
         collapsed={collapsed}
         className={cn(
-          'absolute inset-0 mx-auto my-auto transition-all delay-700 duration-500'
+          'absolute inset-0 mx-auto my-auto hidden transition-all delay-700 duration-500 sm:flex'
         )}
       />
       <div
