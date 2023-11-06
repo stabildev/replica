@@ -34,3 +34,19 @@ body {
     transform: rotate(0deg) translateX(110px) rotate(0deg);
   }
 }
+
+.button-border {
+  mask-image: radial-gradient(
+    at top left,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.radial-blur-bg {
+  background-image: radial-gradient(
+    at top center,
+    rgb(var(--border-rgb) / 0) 50%,
+    rgb(var(--border-rgb) / 0.1) 100%
+  );
+}
