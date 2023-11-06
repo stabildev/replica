@@ -54,8 +54,11 @@ export default function Home() {
             </div>
             <button
               // type="submit"
-              className="from-grad-purple via-grad-pink to-grad-orange z-10 h-11 rounded-lg bg-gradient-to-br from-10% via-40% px-5 font-medium text-white"
+              className="from-grad-purple via-grad-pink to-grad-orange relative z-10 h-11 rounded-lg bg-gradient-to-br from-10% via-40% px-5 font-medium text-white"
             >
+              <div className="border-border/10 absolute -inset-1 rounded-xl border-[1px]" />
+              <div className="border-border/10 absolute -inset-2 rounded-2xl border-[1px]" />
+              <div className="border-border/5 absolute -inset-3 rounded-[1.25rem] border-[1px]" />
               Join waitlist
             </button>
           </form>
@@ -73,7 +76,7 @@ export default function Home() {
         />
 
         {/* Hero Preview */}
-        <div className="relative mt-4 h-[766px] min-w-[1216px] self-start sm:mt-12">
+        <div className="relative mt-4 h-[766px] min-w-[1216px] self-start sm:mt-12 sm:self-auto">
           <Image
             src="/hero-preview.png"
             alt="screenshot"
@@ -90,7 +93,10 @@ export default function Home() {
         id="cta"
         className="relative flex h-[70vh] flex-col items-center justify-center gap-5 overflow-hidden px-4"
       >
-        <div className="via-grad-pink m-3 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-violet-400 from-10% to-yellow-200 to-90% text-5xl font-medium text-white sm:h-24 sm:w-24 sm:text-6xl">
+        <div className="via-grad-pink relative m-3 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-violet-400 from-10% to-yellow-200 to-90% text-5xl font-medium text-white sm:h-24 sm:w-24 sm:text-6xl">
+          <div className="border-border/10 absolute -inset-1 rounded-[1.75rem] border-[1px]" />
+          <div className="border-border/10 absolute -inset-2 rounded-[2rem] border-[1px]" />
+          <div className="border-border/5 absolute -inset-3 rounded-[2.25rem] border-[1px]" />
           D
         </div>
 
@@ -105,8 +111,11 @@ export default function Home() {
         </p>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="from-grad-purple via-grad-pink to-grad-orange z-10 m-5 h-11 w-full rounded-lg bg-gradient-to-br from-10% via-40% px-5 font-medium text-white sm:w-fit"
+          className="from-grad-purple via-grad-pink to-grad-orange relative z-10 m-5 h-11 w-full rounded-lg bg-gradient-to-br from-10% via-40% px-5 font-medium text-white sm:w-fit"
         >
+          <div className="border-border/10 absolute -inset-1 rounded-xl border-[1px]" />
+          <div className="border-border/10 absolute -inset-2 rounded-2xl border-[1px]" />
+          <div className="border-border/5 absolute -inset-3 rounded-[1.25rem] border-[1px]" />
           Join waitlist
         </button>
 

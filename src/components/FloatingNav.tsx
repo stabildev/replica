@@ -119,12 +119,14 @@ export const FloatingNav = ({
         {/* CTA Button */}
         <li
           className={cn(
-            'from-grad-purple via-grad-pink to-grad-orange relative ml-3 mr-1 flex h-8 cursor-pointer flex-row items-center overflow-clip rounded-full bg-gradient-to-r from-10% via-40% text-center font-medium text-white',
+            'from-grad-purple via-grad-pink to-grad-orange relative flex h-8 cursor-pointer flex-row items-center overflow-hidden rounded-full bg-gradient-to-r from-10% via-40% text-center font-medium text-white',
             'transition-all delay-700 duration-500',
-            collapsed ? 'w-28' : 'w-0'
+            collapsed ? 'ml-3 mr-1 w-28' : 'w-0'
           )}
         >
-          <span className="mx-auto whitespace-nowrap">Join waitlist</span>
+          <span className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
+            Join waitlist
+          </span>
         </li>
       </ul>
     </nav>
