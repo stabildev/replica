@@ -38,10 +38,10 @@ export const Navbar = () => {
   }, [])
 
   return (
-    <div className="fixed top-0 z-20 flex h-20 w-full flex-col items-stretch px-6">
+    <div className="fixed top-0 z-20 flex h-20 w-full flex-col items-stretch">
       <div
         className={cn(
-          'flex h-full w-full items-center justify-center bg-border/[1%] backdrop-blur-md transition-opacity delay-700 duration-500',
+          'flex h-full w-full items-center justify-center bg-border/[1%] px-6 backdrop-blur-md transition-opacity delay-700 duration-500',
           collapsed && 'opacity-0'
         )}
       >
