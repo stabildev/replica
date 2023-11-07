@@ -11,33 +11,38 @@ export default function Home() {
         className="relative flex max-w-full flex-col items-center overflow-clip px-5 pt-36 sm:min-h-screen"
       >
         <div className="absolute top-0 -z-10 h-screen w-screen sm:h-[800px] sm:w-full">
-          <Image src="/lights.png" fill alt="" className="object-cover" />
+          <Image
+            src="/spotlight.png"
+            fill
+            alt=""
+            className="object-cover opacity-30"
+          />
         </div>
         <div
           id="section-header"
           className="flex flex-col items-center gap-4 text-center"
         >
           {/* Announcement */}
-          <div className="border-purpleshine/20 hover:border-purpleshine/30 group relative cursor-pointer overflow-clip rounded-full border px-3 py-[0.07rem] transition duration-300">
-            <span className="from-grad-purple via-grad-pink to-grad-orange bg-gradient-to-r bg-clip-text text-sm text-white/50 opacity-80">
-              Announcing our $1.4M Fundraise
+          <div className="group relative cursor-pointer overflow-clip rounded-full border border-purpleshine/20 px-3 py-[0.07rem] transition duration-300 hover:border-purpleshine/30">
+            <span className="bg-gradient-to-r from-grad-purple via-grad-pink to-grad-orange bg-clip-text text-sm text-white/50 opacity-80">
+              Just Released: Get It Now!
             </span>
-            <div className="bg-background absolute inset-0 -z-10" />
-            <div className="to-purpleshine/30 from-purpleshine/0 absolute -left-1/2 -right-1/2 -top-1/2 bottom-0 -z-10 rounded-full bg-gradient-radial opacity-50 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 -z-10 bg-background" />
+            <div className="absolute -left-1/2 -right-1/2 -top-1/2 bottom-0 -z-10 rounded-full bg-gradient-radial from-purpleshine/0 to-purpleshine/30 opacity-50 transition-opacity duration-300 group-hover:opacity-100" />
           </div>
 
           {/* Title */}
           <h1 className="font-display text-5xl font-medium leading-tight tracking-[-1.44px] sm:text-7xl sm:leading-[80px]">
-            Dimension is the new
+            Lorem ipsum dolor
             <br />
             <span className="bg-gradient-to-r from-purple-400 via-orange-300 to-orange-200 bg-clip-text text-transparent">
-              standard for collaboration
+              sit amet consectetur
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="pt-1 opacity-80 sm:text-lg">
-            Chat, code, cloud, deployments, and more.
+            Quasi voluptates, voluptatum, quo, doloribus quidem
           </p>
 
           {/* Hero Action */}
@@ -45,21 +50,22 @@ export default function Home() {
             id="hero-action"
             className="flex w-full flex-col items-stretch gap-5 py-3.5 sm:flex-row sm:justify-center"
           >
-            <div className="focus-within:border-border/30 border-border/15 group relative h-11 overflow-clip rounded-lg border transition-colors duration-300 sm:w-[278px]">
-              <div className="from-border/10 to-border/5 group-hover:bg-border/5 pointer-events-none absolute inset-0 bg-gradient-to-t to-70% transition duration-300 group-focus-within:opacity-0" />
+            <div className="group relative h-11 overflow-clip rounded-lg border border-border/15 transition-colors duration-300 focus-within:border-border/30 sm:w-[278px]">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-border/10 to-border/5 to-70% transition duration-300 group-focus-within:opacity-0 group-hover:bg-border/5" />
               <input
-                className="placeholder-border/30 bg-background h-full w-full rounded-lg px-3.5 outline-none"
+                className="h-full w-full rounded-lg bg-background px-3.5 placeholder-border/30 outline-none"
                 placeholder="Email address..."
               />
             </div>
             <button
-              // type="submit"
-              className="from-grad-purple via-grad-pink to-grad-orange relative z-10 h-11 rounded-lg bg-gradient-to-br from-10% via-40% px-5 font-medium text-white"
+              type="submit"
+              onClick={(e) => e.preventDefault()}
+              className="relative z-10 h-11 rounded-lg bg-gradient-to-br from-grad-purple from-10% via-grad-pink via-40% to-grad-orange px-5 font-medium text-white"
             >
-              <div className="border-border/10 absolute -inset-1 rounded-xl border-[1px]" />
-              <div className="border-border/10 absolute -inset-2 rounded-2xl border-[1px]" />
-              <div className="border-border/5 absolute -inset-3 rounded-[1.25rem] border-[1px]" />
-              Join waitlist
+              <div className="absolute -inset-1 rounded-xl border-[1px] border-border/10" />
+              <div className="absolute -inset-2 rounded-2xl border-[1px] border-border/10" />
+              <div className="absolute -inset-3 rounded-[1.25rem] border-[1px] border-border/5" />
+              Join now
             </button>
           </form>
         </div>
@@ -76,14 +82,14 @@ export default function Home() {
         />
 
         {/* Hero Preview */}
-        <div className="relative mt-4 h-[766px] min-w-[1216px] self-start sm:mt-12 sm:self-auto">
+        <div className="relative mt-4 h-[719px] min-w-[1200px] max-w-full self-start sm:mt-12 xl:self-auto">
           <Image
-            src="/hero-preview.png"
+            src="/screenshot.png"
             alt="screenshot"
             fill
             quality={100}
             priority
-            className="border-border/10 gradient-mask-b-0 left-0 rounded-2xl border object-cover"
+            className=" left-0 rounded-2xl border border-border/10 object-contain gradient-mask-b-0"
           />
         </div>
       </section>
@@ -93,30 +99,31 @@ export default function Home() {
         id="cta"
         className="relative flex h-[70vh] flex-col items-center justify-center gap-5 overflow-hidden px-4"
       >
-        <div className="via-grad-pink relative m-3 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-violet-400 from-10% to-yellow-200 to-90% text-5xl font-medium text-white sm:h-24 sm:w-24 sm:text-6xl">
-          <div className="border-border/10 absolute -inset-1 rounded-[1.75rem] border-[1px]" />
-          <div className="border-border/10 absolute -inset-2 rounded-[2rem] border-[1px]" />
-          <div className="border-border/5 absolute -inset-3 rounded-[2.25rem] border-[1px]" />
-          D
+        <div className="relative m-3 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-grad-purple from-10% via-grad-pink to-grad-orange to-90% text-5xl font-semibold text-white sm:h-24 sm:w-24 sm:text-6xl">
+          <div className="absolute -inset-1 rounded-[1.75rem] border-[1px] border-border/10" />
+          <div className="absolute -inset-2 rounded-[2rem] border-[1px] border-border/10" />
+          <div className="absolute -inset-3 rounded-[2.25rem] border-[1px] border-border/5" />
+          R
         </div>
 
-        <h2 className="font-display text-center text-3xl font-medium sm:text-5xl">
-          Ready to join a new{' '}
-          <span className="from-grad-purple via-grad-pink to-grad-orange bg-gradient-to-r from-10% via-40% bg-clip-text font-medium text-transparent">
-            Dimension?
+        <h2 className="text-center font-display text-3xl font-medium sm:text-5xl">
+          Lorem ipsum dolor{' '}
+          <span className="bg-gradient-to-r from-grad-purple from-10% via-grad-pink via-40% to-grad-orange bg-clip-text font-medium text-transparent">
+            sit amet?
           </span>
         </h2>
         <p className="text-center">
-          The delightfully smart collaboration platform. Get started - for free.
+          Consectetur adipisicing elit. Quasi voluptates, voluptatum, quo,
+          doloribus quidem
         </p>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="from-grad-purple via-grad-pink to-grad-orange relative z-10 m-5 h-11 w-full rounded-lg bg-gradient-to-br from-10% via-40% px-5 font-medium text-white sm:w-fit"
+          className="relative z-10 m-5 h-11 w-full rounded-lg bg-gradient-to-br from-grad-purple from-10% via-grad-pink via-40% to-grad-orange px-5 font-medium text-white sm:w-fit"
         >
-          <div className="border-border/10 absolute -inset-1 rounded-xl border-[1px]" />
-          <div className="border-border/10 absolute -inset-2 rounded-2xl border-[1px]" />
-          <div className="border-border/5 absolute -inset-3 rounded-[1.25rem] border-[1px]" />
-          Join waitlist
+          <div className="absolute -inset-1 rounded-xl border-[1px] border-border/10" />
+          <div className="absolute -inset-2 rounded-2xl border-[1px] border-border/10" />
+          <div className="absolute -inset-3 rounded-[1.25rem] border-[1px] border-border/5" />
+          Join now
         </button>
 
         <Circle className="absolute -top-20 left-1/2 -z-20 h-72 -translate-x-1/2 sm:top-14" />
@@ -132,12 +139,17 @@ export default function Home() {
       </section>
       <hr className="border-border/15 gradient-mask-r-50-d" />
       <nav className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 pb-40 pt-20 sm:flex-row">
-        <div className="flex-[0.7] font-medium">Hardcoded.</div>
+        <a
+          href="https://hardcoded.digital"
+          className="flex-[0.7] font-medium hover:underline"
+        >
+          Hardcoded.
+        </a>
         <div className="grid flex-1 grid-cols-2 gap-6 sm:grid-cols-3">
           <div className="space-y-5 text-sm">
             <div className="font-medium">Product</div>
             <div className="cursor-pointer opacity-60 transition-opacity duration-300 hover:opacity-80">
-              Changelog
+              Updates
             </div>
             <div className="cursor-pointer opacity-60 transition-opacity duration-300 hover:opacity-80">
               Documentation
@@ -146,22 +158,22 @@ export default function Home() {
           <div className="space-y-5 text-sm">
             <div className="font-medium">Company</div>
             <div className="cursor-pointer opacity-60 transition-opacity duration-300 hover:opacity-80">
-              About
+              About us
             </div>
             <div className="cursor-pointer opacity-60 transition-opacity duration-300 hover:opacity-80">
-              Careers
+              Jobs
             </div>
             <div className="cursor-pointer opacity-60 transition-opacity duration-300 hover:opacity-80">
-              Blog
+              News
             </div>
           </div>
           <div className="space-y-5 text-sm">
-            <div className="font-medium">Contact</div>
+            <div className="font-medium">Contact us</div>
             <div className="cursor-pointer opacity-60 transition-opacity duration-300 hover:opacity-80">
               Discord
             </div>
             <div className="cursor-pointer opacity-60 transition-opacity duration-300 hover:opacity-80">
-              Twitter
+              X / Twitter
             </div>
             <div className="cursor-pointer opacity-60 transition-opacity duration-300 hover:opacity-80">
               Github
@@ -174,7 +186,13 @@ export default function Home() {
       </nav>
       <hr className="border-border/15 gradient-mask-r-50-d" />
       <footer className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 py-14 text-xs opacity-40 sm:flex-row">
-        <p>Copyright © 2023 Hardcoded Digital. All rights reserved.</p>
+        <p>
+          Copyright © 2023{' '}
+          <a href="https://hardcoded.digital" className="hover:underline">
+            Hardcoded Digital
+          </a>
+          . Portfolio demonstration only.
+        </p>
         <nav className="flex flex-row gap-5">
           <p>Privacy Policy</p>
           <p>Terms of Service</p>

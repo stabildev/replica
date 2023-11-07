@@ -67,7 +67,7 @@ export const FloatingNav = ({
   return (
     <nav
       className={cn(
-        'border-border/10 relative flex h-12 w-fit items-center overflow-clip rounded-full border p-1 transition delay-700 duration-500',
+        'relative flex h-12 w-fit items-center overflow-clip rounded-full border border-border/10 p-1 transition delay-700 duration-500',
         collapsed && 'backdrop-blur-sm',
         className
       )}
@@ -75,7 +75,7 @@ export const FloatingNav = ({
       {/* Background */}
       <div
         className={cn(
-          'bg-background/50 absolute inset-0 -z-10 transition delay-700 duration-500',
+          'absolute inset-0 -z-10 bg-background/50 transition delay-700 duration-500',
           collapsed ? 'opacity-100' : 'opacity-0'
         )}
       />
@@ -88,7 +88,7 @@ export const FloatingNav = ({
 
       <div
         ref={hoverRef}
-        className="bg-border/[3%] border-border/10 pointer-events-none absolute block h-10 rounded-full border transition-all duration-300"
+        className="pointer-events-none absolute block h-10 rounded-full border border-border/10 bg-border/[3%] transition-all duration-300"
         style={underlineStyles}
       />
       <ul ref={navRef} className="flex items-center text-sm opacity-100">
@@ -97,7 +97,7 @@ export const FloatingNav = ({
           <NavLink index={index} key={index}>
             {item.name}
             {item.count && (
-              <div className="bg-border/5 ml-1 flex h-5 w-5 items-center justify-center rounded-full text-center text-xs">
+              <div className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-border/5 text-center text-xs">
                 {item.count}
               </div>
             )}
@@ -108,7 +108,7 @@ export const FloatingNav = ({
         <li className="relative -left-1 -top-2">
           <div
             className={cn(
-              'text-border/20 tansition-opacity absolute delay-700 duration-500',
+              'tansition-opacity absolute text-border/20 delay-700 duration-500',
               collapsed ? 'opacity-1' : 'opacity-0'
             )}
           >
@@ -119,13 +119,13 @@ export const FloatingNav = ({
         {/* CTA Button */}
         <li
           className={cn(
-            'from-grad-purple via-grad-pink to-grad-orange relative flex h-8 cursor-pointer flex-row items-center overflow-hidden rounded-full bg-gradient-to-r from-10% via-40% text-center font-medium text-white',
+            'relative flex h-8 cursor-pointer flex-row items-center overflow-hidden rounded-full bg-gradient-to-r from-grad-purple from-10% via-grad-pink via-40% to-grad-orange text-center font-medium text-white',
             'transition-all delay-700 duration-500',
             collapsed ? 'ml-3 mr-1 w-28' : 'w-0'
           )}
         >
-          <span className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
-            Join waitlist
+          <span className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap font-medium">
+            Join now
           </span>
         </li>
       </ul>

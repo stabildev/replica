@@ -4,12 +4,12 @@
 
 :root {
   --foreground-rgb: 205 210 230;
-  --background-rgb: 5 6 30;
+  --background-rgb: 0 0 28;
   --border-rgb: 226 232 255;
-  --grad-purple-rgb: 153 104 255;
+  --grad-purple-rgb: 150 20 230;
   --grad-pink-rgb: 255 108 178;
-  --grad-orange-rgb: 255 175 86;
-  --purpleshine-rgb: 202 183 255;
+  --grad-orange-rgb: 251 91 36;
+  --purpleshine-rgb: 150 20 230;
 }
 
 body {
