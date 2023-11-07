@@ -89,6 +89,7 @@ export default function Home() {
             fill
             quality={100}
             priority
+            loading="eager"
             className=" left-0 rounded-2xl border border-border/10 object-contain gradient-mask-b-0"
           />
         </div>
